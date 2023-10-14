@@ -40,6 +40,53 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- Responsive styles-->
   <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js@1.11.4/dist/toastify.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.11.4/dist/toastify.min.js"></script>
+
+
+
+
+
+  <!-- Start of Async Drift Code -->
+  <script>
+    "use strict";
+
+    !function () {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+          t.factory = function (e) {
+            return function () {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function (e) {
+            t[e] = t.factory(e);
+          }), t.load = function (t) {
+            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('n5g59y7awvaw');
+  </script>
+  <script>
+    drift.config({
+      verticalOffset: 70,
+    })
+  </script>
+  <!-- End of Async Drift Code -->
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file.-->
   <!--if lt IE 9
     script(src='js/html5shiv.js')
@@ -57,31 +104,37 @@
           <div class="row">
             <div class="logo-area clearfix">
 
-              <!-- <div class="logo col-lg-3 col-md-12">
+              <div class="logo col-lg-3 col-md-12">
                 <a href="index.html">
-                  <img src="images/logo.png" alt="">
+                  <img style="width:150px;" src="./images/kmk/kmkreducedlogo.png" alt="">
                 </a>
-              </div> -->
+              </div>
 
-              <div class="logo col-lg-3 col-md-12" style="text-align: center; padding: 20px;  border-radius: 10px;">
+              <!-- <div class="logo col-lg-3 col-md-12" style="text-align: center; padding: 20px;  border-radius: 10px;">
                 <h1 style="color: red; font-size: 36px; margin-bottom: 10px;">KMK</h1>
                 <strong style="color: #003366; font-size: 24px;">⛟ TRANSPORT WISE</strong>
-              </div>
+              </div> -->
 
 
               <!-- logo end-->
               <div class="col-lg-9 col-md-12 pull-right">
                 <ul class="top-info unstyled">
-                  <li><span class="info-icon"><i class="icon icon-phone3"></i></span>
+                  <li><span style="cursor: pointer;" class="info-icon"
+                      onclick="window.location.href='tel:+256703145290';">
+                      <i class="icon icon-phone3"></i>
+                    </span>
                     <div class="info-wrapper">
                       <p class="info-title">24/7 Response Time</p>
                       <p class="info-subtitle">+256 703 145290</p>
                     </div>
                   </li>
-                  <li><span class="info-icon"><i class="icon icon-envelope"></i></span>
+                  <li><span style="cursor: pointer;" class="info-icon"
+                      onclick="window.location.href='mailto:kmktransport@gmail.com';">
+                      <i class="icon icon-envelope"></i>
+                    </span>
                     <div class="info-wrapper">
                       <p class="info-title">Send Your Query</p>
-                      <p class="info-subtitle">mail@example.com</p>
+                      <p class="info-subtitle">kmktransport@gmail.com</p>
                     </div>
                   </li>
 
@@ -135,7 +188,11 @@
                 </ul>
                 <!--Nav ul end-->
               </div>
-              <a href="" class="top-right-btn btn btn-primary">Call</a>
+              <!-- <a href="" class="top-right-btn btn btn-primary">Call</a> -->
+              <a href="https://wa.me/256703145290" target="_blank" class="top-right-btn btn btn-primary">
+                <i class="fab fa-whatsapp"></i>
+
+              </a>
               <!-- Top bar btn -->
             </nav>
             <!-- Collapse end-->
@@ -164,11 +221,13 @@
             <div class="slider-content text-left">
               <div class="col-md-12">
                 <h2 class="slide-title title-light">You have needs</h2>
-                <h3 class="slide-sub-title">We Have the Solutions</h3>
+                <h3 class="slide-sub-title"> KMK We Have the Solutions</h3>
                 <p class="slider-description lead">We will deal with your failure that determines <br /> how you achieve
                   success.</p>
-                <p><a class="slider btn btn-primary" href="#">Know More</a><a class="slider btn btn-border"
-                    href="#">View Services</a></p>
+                <p>
+                  <!-- <a class="slider btn btn-primary" href="#">Know More</a> -->
+                  <a class="slider btn btn-border" href="#ts-services">View Services</a>
+                </p>
               </div>
               <!-- Col end-->
             </div>
@@ -184,7 +243,7 @@
                 <h2 class="slide-title title-light">We deal with logistics</h2>
                 <h3 class="slide-sub-title">You focus on your Business</h3>
                 <p class="slider-description lead">We will deal with your failure that determines </p>
-                <p><a class="slider btn btn-primary" href="#">Our Services</a></p>
+                <p><a class="slider btn btn-primary" href="#ts-services">Our Services</a></p>
               </div>
               <!-- Col end-->
             </div>
@@ -199,7 +258,7 @@
               <div class="col-md-12">
                 <h2 class="slide-title title-light">17 years of experience</h2>
                 <h3 class="slide-sub-title">Strong Distribution Network</h3>
-                <p><a class="slider btn btn-primary" href="#">View Services</a></p>
+                <p><a class="slider btn btn-primary" href="#ts-services">View Services</a></p>
               </div>
               <!-- Col end-->
             </div>
@@ -228,7 +287,7 @@
                 </div>
                 <h3 class="ts-feature-title">Reliable Services</h3>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings.</p>
-                <a class="slider btn btn-primary" href="#">Read More</a>
+                <!-- <a class="slider btn btn-primary" href="#">Read More</a> -->
               </div>
             </div>
             <!-- feature box-1 end-->
@@ -242,7 +301,7 @@
                 </div>
                 <h3 class="ts-feature-title">Global Coverage</h3>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings .</p>
-                <a class="slider btn btn-primary" href="#">Read More</a>
+                <!-- <a class="slider btn btn-primary" href="#">Read More</a> -->
               </div>
             </div>
             <!-- feature box-2 end-->
@@ -257,7 +316,7 @@
                 <!--<i class="icon icon-clock3"></i>-->
                 <h3 class="ts-feature-title">Cost Savings</h3>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings .</p>
-                <a class="slider btn btn-primary" href="#">Read More</a>
+                <!-- <a class="slider btn btn-primary" href="#">Read More</a> -->
               </div>
             </div>
             <!-- feature box-2 end-->
@@ -374,8 +433,8 @@
                 <h3 class="service-title">Air Freight</h3>
                 <p>We have express solutions, you can choose premium economy, We also provide economy, Client will get
                   simple inventory control.</p>
-                <p><a class="link-more" href="service-single.html">Read More<i class="icon icon-right-arrow2"></i></a>
-                </p>
+                <!-- <p><a class="link-more" href="service-single.html">Read More<i class="icon icon-right-arrow2"></i></a>
+                </p> -->
               </div>
             </div>
             <!-- Service1 end-->
@@ -390,8 +449,8 @@
                 <h3 class="service-title">Ocean Freight</h3>
                 <p>We have express solutions, you can choose premium economy, We also provide economy, Client will get
                   simple inventory control.</p>
-                <p><a class="link-more" href="service-single.html">Read More<i class="icon icon-right-arrow2"></i></a>
-                </p>
+                <!-- <p><a class="link-more" href="service-single.html">Read More<i class="icon icon-right-arrow2"></i></a>
+                </p> -->
               </div>
             </div>
             <!-- Service1 end-->
@@ -403,11 +462,11 @@
                 <img class="img-fluid" src="images/services/service3.jpg" alt="">
               </div>
               <div class="ts-service-content">
-                <h3 class="service-title">Cargo Express</h3>
+                <h4 class="service-title">Transport And Delivery Services</h4>
                 <p>We have express solutions, you can choose premium economy, We also provide economy, Client will get
                   simple inventory control.</p>
-                <p><a class="link-more" href="service-single.html">Read More<i class="icon icon-right-arrow2"></i></a>
-                </p>
+                <!-- <p><a class="link-more" href="service-single.html">Read More<i class="icon icon-right-arrow2"></i></a>
+                </p> -->
               </div>
             </div>
             <!-- Service1 end-->
@@ -426,8 +485,8 @@
                 <h3 class="service-title">Warehousing</h3>
                 <p>We have express solutions, you can choose premium economy, We also provide economy, Client will get
                   simple inventory control.</p>
-                <p><a class="link-more" href="service-single.html">Read More<i class="icon icon-right-arrow2"></i></a>
-                </p>
+                <!-- <p><a class="link-more" href="service-single.html">Read More<i class="icon icon-right-arrow2"></i></a>
+                </p> -->
               </div>
             </div>
             <!-- Service1 end-->
@@ -439,11 +498,11 @@
                 <img class="img-fluid" src="images/services/service5.jpg" alt="">
               </div>
               <div class="ts-service-content">
-                <h3 class="service-title">Contract Logistics</h3>
+                <h3 class="service-title">Truck And Vehicle Hire</h3>
                 <p>We have express solutions, you can choose premium economy, We also provide economy, Client will get
                   simple inventory control.</p>
-                <p><a class="link-more" href="service-single.html">Read More<i class="icon icon-right-arrow2"></i></a>
-                </p>
+                <!-- <p><a class="link-more" href="service-single.html">Read More<i class="icon icon-right-arrow2"></i></a>
+                </p> -->
               </div>
             </div>
             <!-- Service1 end-->
@@ -458,8 +517,8 @@
                 <h3 class="service-title">Ground Transport</h3>
                 <p>We have express solutions, you can choose premium economy, We also provide economy, Client will get
                   simple inventory control.</p>
-                <p><a class="link-more" href="service-single.html">Read More<i class="icon icon-right-arrow2"></i></a>
-                </p>
+                <!-- <p><a class="link-more" href="service-single.html">Read More<i class="icon icon-right-arrow2"></i></a>
+                </p> -->
               </div>
 
             </div>
@@ -658,20 +717,13 @@
           </div>
           <!-- Col end-->
           <div class="col-lg-7 qutoe-form-inner-le">
-            <form class="contact-form" id="contact-form" action="contact-form.php" method="POST">
+            <form class="contact-form" id="contact-form">
               <h2 class="column-title "><span>We are always ready</span> Request a call back</h2>
               <div class="error-container"></div>
               <div class="row">
                 <div class="col-lg-12">
                   <div class="form-group">
                     <input class="form-control form-name" id="name" name="name" placeholder="Full Name" type="text"
-                      required="">
-                  </div>
-                </div>
-                <!-- Col end-->
-                <div class="col-lg-12">
-                  <div class="form-group">
-                    <input class="form-control form-website" id="url" name="url" placeholder="Website" type="url"
                       required="">
                   </div>
                 </div>
@@ -687,11 +739,9 @@
                       rows="8"></textarea>
                   </div>
                 </div>
-                <!-- Col 12 end-->
               </div>
-              <!-- Form row end-->
               <div class="text-right">
-                <button class="btn btn-primary tw-mt-30" type="submit">Contact US</button>
+                <button class="btn btn-primary tw-mt-30" type="button" onclick="sendEmail()">Contact US</button>
               </div>
             </form>
             <!-- Form end-->
@@ -758,7 +808,8 @@
             </p>
           </div>
           <div class="col-lg-4 text-right">
-            <a class="btn btn-box" href="">Contact Us <br />Or Call +256 703 145290</a>
+            <a class="btn btn-box" href="#" onclick="window.location.href='tel:+256703145290';">Contact <br />Or Call Us
+              +256 703 145290</a>
           </div>
         </div>
       </div>
@@ -772,19 +823,19 @@
           <div class="row">
             <div class="col-lg-4 col-md-12 footer-widget footer-about">
               <div class="footer-logo">
-                <img src="images/footer-logo.png" alt="">
+                <img style="width:150px;" src="./images/kmk/kmkreducedlogo.png" alt="">
               </div>
               <p>KMK is the Ugandas leading freight forwarding, Midst brought winged midst beast years, be
                 very was. Brought that called creeping</p>
 
-              <h3 class="widget-title">Subscribe Newsletter!</h3>
+              <!-- <h3 class="widget-title">Subscribe Newsletter!</h3>
               <form class="newsletter-form" id="newsletter-form" action="#" method="post">
                 <div class="form-group">
                   <input class="form-control form-control-lg" id="newsletter-form-email" type="email" name="email"
                     placeholder="Email " autocomplete="off">
                   <button class="btn btn-primary"><i class="fa fa-paper-plane"></i></button>
                 </div>
-              </form>
+              </form> -->
             </div>
             <!-- About us end-->
             <div class="col-lg-4 col-md-6 footer-widget">
@@ -816,7 +867,7 @@
                     class="icon icon-envelope"></i></span>
                 <div class="ts-contact-content">
                   <h3 class="ts-contact-title">Email Address</h3>
-                  <p>support@transline.com</p>
+                  <p>kmktransport@gmail.com</p>
                 </div>
                 <!-- Contact content end-->
               </div>
@@ -884,6 +935,51 @@
       // Update the content of the "currentYear" span with the current year
       document.getElementById("currentYear").textContent = currentYear;
     </script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("fcTjLWSnhcZiQlj1a"); // Replace YOUR_PUBLIC_KEY with your actual public key
+      })();
+    </script>
+
+    <script>
+      function sendEmail() {
+        const templateParams = {
+          from_name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          message: document.getElementById("message").value,
+          email_to: "kmktransport@gmail.com",
+          email_to: "kmk"
+        };
+
+        emailjs.send("service_mrf6ewt", "template_xb5668r", templateParams, "fcTjLWSnhcZiQlj1a")
+          .then(function (response) {
+            // Success toast
+            Toastify({
+              text: "Email sent successfully!",
+              duration: 3000, // Toast display duration in milliseconds
+              close: true, // Enable the close button
+              gravity: "top", // Toast position ("top" or "bottom")
+              position: "right", // Toast position ("left" or "right")
+              backgroundColor: "green", // Background color
+            }).showToast();
+          }, function (error) {
+            // Error toast
+            Toastify({
+              text: "Error sending email: " + error,
+              duration: 3000,
+              close: true,
+              gravity: "top",
+              position: "right",
+              backgroundColor: "red",
+            }).showToast();
+          });
+      }
+    </script>
+
+    <script src="./js/toastify-js-master/toastify-js-master/src/toastify.js"></script>
+
     <!-- initialize jQuery Library-->
     <script type="text/javascript" src="js/jquery.js"></script>
 

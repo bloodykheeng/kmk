@@ -36,8 +36,46 @@
   <link rel="stylesheet" href="css/colorbox.css">
   <!-- Template styles-->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Responsive styles-->
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Start of Async Drift Code -->
+  <script>
+    "use strict";
+
+    !function () {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+          t.factory = function (e) {
+            return function () {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function (e) {
+            t[e] = t.factory(e);
+          }), t.load = function (t) {
+            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('n5g59y7awvaw');
+  </script>
+  <!-- End of Async Drift Code -->
+  <script>
+    drift.config({
+      verticalOffset: 70,
+    })
+  </script>
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file.-->
   <!--if lt IE 9
     script(src='js/html5shiv.js')
@@ -54,29 +92,38 @@
         <div class="container">
           <div class="row">
             <div class="logo-area clearfix">
-              <!-- <div class="logo col-lg-3 col-md-12">
-                              <a href="index.html">
-                                <img src="images/logo.png" alt="">
-                              </a>
-                            </div> -->
 
-              <div class="logo col-lg-3 col-md-12" style="text-align: center; padding: 20px;  border-radius: 10px;">
-                <h1 style="color: red; font-size: 36px; margin-bottom: 10px;">KMK</h1>
-                <strong style="color: #003366; font-size: 24px;">⛟ TRANSPORT WISE</strong>
+              <div class="logo col-lg-3 col-md-12">
+                <a href="index.html">
+                  <img style="width:150px;" src="./images/kmk/kmkreducedlogo.png" alt="">
+                </a>
               </div>
+
+              <!-- <div class="logo col-lg-3 col-md-12" style="text-align: center; padding: 20px;  border-radius: 10px;">
+                        <h1 style="color: red; font-size: 36px; margin-bottom: 10px;">KMK</h1>
+                        <strong style="color: #003366; font-size: 24px;">⛟ TRANSPORT WISE</strong>
+                      </div> -->
+
+
               <!-- logo end-->
               <div class="col-lg-9 col-md-12 pull-right">
                 <ul class="top-info unstyled">
-                  <li><span class="info-icon"><i class="icon icon-phone3"></i></span>
+                  <li><span style="cursor: pointer;" class="info-icon"
+                      onclick="window.location.href='tel:+256703145290';">
+                      <i class="icon icon-phone3"></i>
+                    </span>
                     <div class="info-wrapper">
                       <p class="info-title">24/7 Response Time</p>
-                      <p class="info-subtitle">(+9) 847-291-4353</p>
+                      <p class="info-subtitle">+256 703 145290</p>
                     </div>
                   </li>
-                  <li><span class="info-icon"><i class="icon icon-envelope"></i></span>
+                  <li><span style="cursor: pointer;" class="info-icon"
+                      onclick="window.location.href='mailto:kmktransport@gmail.com';">
+                      <i class="icon icon-envelope"></i>
+                    </span>
                     <div class="info-wrapper">
                       <p class="info-title">Send Your Query</p>
-                      <p class="info-subtitle">mail@example.com</p>
+                      <p class="info-subtitle">kmktransport@gmail.com</p>
                     </div>
                   </li>
 
@@ -129,7 +176,10 @@
                 </ul>
                 <!--Nav ul end-->
               </div>
-              <a href="" class="top-right-btn btn btn-primary">Call</a>
+              <a href="https://wa.me/256703145290" target="_blank" class="top-right-btn btn btn-primary">
+                <i class="fab fa-whatsapp"></i>
+
+              </a>
               <!-- Top bar btn -->
             </nav>
             <!-- Collapse end-->
@@ -258,43 +308,42 @@
           <div class="row">
             <div class="col-lg-4 col-md-12 footer-widget footer-about">
               <div class="footer-logo">
-                <img src="images/footer-logo.png" alt="">
+                <img style="width:150px;" src="./images/kmk/kmkreducedlogo.png" alt="">
               </div>
-              <p>Transline Logistics is the UK's leading freight forwarding, Midst brought winged midst beast years, be
+              <p>KMK is the Ugandas leading freight forwarding, Midst brought winged midst beast years, be
                 very was. Brought that called creeping</p>
 
-              <h3 class="widget-title">Subscribe Newsletter!</h3>
-              <form class="newsletter-form" id="newsletter-form" action="#" method="post">
-                <div class="form-group">
-                  <input class="form-control form-control-lg" id="newsletter-form-email" type="email" name="email"
-                    placeholder="Email " autocomplete="off">
-                  <button class="btn btn-primary"><i class="fa fa-paper-plane"></i></button>
-                </div>
-              </form>
+              <!-- <h3 class="widget-title">Subscribe Newsletter!</h3>
+                  <form class="newsletter-form" id="newsletter-form" action="#" method="post">
+                    <div class="form-group">
+                      <input class="form-control form-control-lg" id="newsletter-form-email" type="email" name="email"
+                        placeholder="Email " autocomplete="off">
+                      <button class="btn btn-primary"><i class="fa fa-paper-plane"></i></button>
+                    </div>
+                  </form> -->
             </div>
             <!-- About us end-->
-            <div class="col-lg-4 col-md-12 footer-widget">
+            <div class="col-lg-4 col-md-6 footer-widget">
               <h3 class="widget-title">Quick Links</h3>
               <ul class="list-dash">
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="service.html">Our Services</a></li>
-                <li><a href="project-all.html">Projects</a></li>
+                <li><a href="#ts-services">Our Services</a></li>
                 <li><a href="team.html">Our Team</a></li>
                 <li><a href="faq.html">FAQs</a></li>
-                <li><a href="news-left-sidebar.html">Our Blog</a></li>
-                <li><a href="news-right-sidebar.html">Why Need Agent?</a></li>
+
+
                 <li><a href="pricing-table.html">Investments</a></li>
                 <li><a href="contact.html">Consultation</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
               </ul>
             </div>
-            <div class="col-lg-4 col-md-12W footer-widget">
+            <div class="col-lg-4 col-md-6 footer-widget">
               <h3 class="widget-title">Company Locations</h3>
               <div class="ts-contact-info"><span class="ts-contact-icon float-left"><i
                     class="icon icon-map-marker2"></i></span>
                 <div class="ts-contact-content">
                   <h3 class="ts-contact-title">Address</h3>
-                  <p>370 Grove Street East Northport, NY 11731</p>
+                  <p>Nakawa Kampala</p>
                 </div>
                 <!-- Contact content end-->
               </div>
@@ -303,7 +352,7 @@
                     class="icon icon-envelope"></i></span>
                 <div class="ts-contact-content">
                   <h3 class="ts-contact-title">Email Address</h3>
-                  <p>support@transline.com</p>
+                  <p>kmktransport@gmail.com</p>
                 </div>
                 <!-- Contact content end-->
               </div>
@@ -311,11 +360,10 @@
                     class="icon icon-phone3"></i></span>
                 <div class="ts-contact-content">
                   <h3 class="ts-contact-title">Phone Number</h3>
-                  <p>+1(0123) 4567 890, +1(0231) 3421 453</p>
+                  <p>+256 703 145290</p>
                 </div>
                 <!-- Contact content end-->
               </div>
-
             </div>
           </div>
           <!-- Content row end-->
@@ -327,8 +375,9 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-6 col-md-12">
-              <div class="copyright-info"><span>Copyright © 2022 a theme by <a
-                    href="https://furioustheme.com">Furioustheme</a></span></div>
+              <div class="copyright-info">
+                <span>Copyright &copy; <span id="currentYear"></span> <a href="#">KMK</a></span>
+              </div>
             </div>
             <div class="col-lg-6 col-md-12">
               <div class="footer-social text-right">
@@ -362,6 +411,13 @@
       Javascript Files
       ==================================================
       -->
+    <script>
+      // Get the current year
+      var currentYear = new Date().getFullYear();
+
+      // Update the content of the "currentYear" span with the current year
+      document.getElementById("currentYear").textContent = currentYear;
+    </script>
     <!-- initialize jQuery Library-->
     <script type="text/javascript" src="js/jquery.js"></script>
 
