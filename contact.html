@@ -241,9 +241,11 @@
             <div class="contact-wrapper full-contact">
               <div class="col-lg-6">
                 <h3 class="column-title">Contact Us</h3>
-                <p class="contact-content"> Had very moveth rule tree. Have. Open fifth moving beginning place void
-                  bring place sea the, give air he fowl beginning from own. There seed one tree third. Over. Also face
-                  thing isn't had man were set.</p>
+                At KMK, we're always here to help you with your logistics and transportation
+                needs. Whether you have a question about
+                our services, need assistance with a custom solution, or want to discuss your unique shipping
+                requirements, our
+                dedicated team is ready to provide you with expert guidance and support.</p>
                 <div class="contact-info-box contact-box info-box ">
                   <div class="contact-info">
                     <div class="ts-contact-info"><span class="ts-contact-icon float-left"><i
@@ -433,26 +435,62 @@
       document.getElementById("currentYear").textContent = currentYear;
     </script>
 
+
     <script>
       // Initialize the map
       var map = L.map('bkmap', {
         center: [0.3136, 32.5811], // Kampala, Uganda coordinates
         zoom: 7,
-        scrollWheelZoom: false // Disable scroll to zoom
+        scrollWheelZoom: true // Enable scroll to zoom
       });
 
-      // Add an OSM tile layer
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(map);
+      // Define base layers
+      var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: ''
+      });
+
+      var terrainLayer = L.tileLayer('https://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        subdomains: ['mt1', 'mt2', 'mt3'],
+        attribution: ''
+      });
+
+      var satelliteLayer = L.tileLayer('https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        subdomains: ['mt1', 'mt2', 'mt3'],
+        attribution: ''
+      });
+
+      var hybridLayer = L.tileLayer('https://{s}.google.com/vt/lyrs=h&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        subdomains: ['mt1', 'mt2', 'mt3'],
+        attribution: ''
+      });
+
+      // Layer control to switch between layers
+      var baseLayers = {
+        "OpenStreetMap": osmLayer,
+        "Terrain View": terrainLayer,
+        "Satellite View": satelliteLayer,
+        "Hybrid View": hybridLayer
+      };
+
+      // Add base OSM layer to map
+      osmLayer.addTo(map);
+
+      // Add layer control to map
+      L.control.layers(baseLayers).addTo(map);
 
       // Add a marker to the map
       L.marker([0.327496, 32.628713]).addTo(map)
         .bindPopup('KMK, Kampala, Uganda')
         .openPopup();
 
-
+      // Remove Leaflet attribution
+      map.attributionControl.setPrefix(false);
     </script>
+
+
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
